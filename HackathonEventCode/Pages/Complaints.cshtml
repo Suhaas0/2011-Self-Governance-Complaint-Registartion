@@ -1,0 +1,79 @@
+﻿@page
+@model HackathonEventCode.Pages.ComplaintsModel
+
+<p style="font-size:200%">
+    Please fill the form again
+</p>
+
+<center>
+    <h3 style="font-size:300%;">Registration Form</h3>
+</center>
+
+<style>
+    body {
+        background-color: aliceblue
+    }
+
+    .container input {
+        border-block-width: 5px;
+        background-color: lightgoldenrodyellow;
+        border-block-start-color: orange;
+        border-block-end-color: green
+    }
+
+    .container label {
+        font-size: 30px;
+        font-style: oblique;
+    }
+
+    .container select {
+        background-color:lightgoldenrodyellow;
+        width:150px;
+        border-block-width: 5px;
+        border-block-start-color: orange;
+        border-block-end-color: green
+    }
+
+</style>
+
+@if (Model.data)
+{
+    <p>
+        @Model.firstName
+        @Model.lastName
+        Work will be started within 2 days
+    </p>
+}
+
+<div class="container">
+    <form method="post">
+        <label for="fname">First name</label> <br>
+        <input style="width:20%" type="text" id="fname" name="fname" required> <br><br>
+
+        <label for="lname">Last name</label> <br>
+        <input style="width:20%" type="text" id="lname" name="lname" required> <br><br>
+
+        <label for="phone_number">Phone number</label> <br>
+        <input style="width:25%" type="text" id="phone_number" name="phone_number" required> <br><br>
+
+        <label for="Email_id">Email address</label> <br>
+        <input style="width:35%" type="email" id="Email_id" name="Email_id" required> <br><br>
+
+        <label for="type">Complaint Type</label> <p> </p>
+        <select id="type" name="type" required>
+            <option style="background-color:lightgoldenrodyellow ; font-size:30px" value="sirisha2278@gmail.com">Road</option>
+            <option style="background-color:lightgoldenrodyellow ; font-size:30px" value="sirisha2278@gmail.com">Water</option>
+            <option style="background-color:lightgoldenrodyellow ; font-size:30px" value="sirisha2278@gamil.com">Sanitation</option>
+            <option style="background-color:lightgoldenrodyellow ; font-size:30px" value="sirisha2278@gmail.com">Electricty</option>
+        </select>
+        <br><br>
+
+        <label for="address">Address</label><br>
+        <textarea style="height:200px ; width:200px ; background-color:lightgoldenrodyellow" id="address" name="address" required></textarea><br><br>
+
+        <label for="message">Complaint</label><br>
+        <textarea style="height:200px ; width:200px ; background-color:lightgoldenrodyellow" id="content" name="content" required></textarea><br><br>
+
+        <input style="font-size:30px" type="submit" value="submit">
+    </form>
+</div>
